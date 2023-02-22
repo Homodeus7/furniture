@@ -3,6 +3,11 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import 'vars';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
 
 // подключения компонентов страницы
 @import "./components/header";
