@@ -1,8 +1,10 @@
-$(function () {
-  $(".header__btn").on("click", function () {
-    $(".rightside-menu").removeClass("rightside-menu--close");
-  });
-  $(".rightside-menu__close").on("click", function () {
-    $(".rightside-menu").addClass("rightside-menu--close");
-  });
-});
+document.querySelector(".header__btn").onclick = function () {
+  document
+    .querySelector(".rightside-menu")
+    .classList.remove("rightside-menu--close");
+};
+document.querySelector(".rightside-menu__close").onclick = function () {
+  document
+    .querySelector(".rightside-menu")
+    .classList.add("rightside-menu--close");
+};
