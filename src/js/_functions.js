@@ -54,14 +54,14 @@ import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper(".swiper", {
   autoplay: {
-    delay: 1000,
+    delay: 2000,
     disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  speed: 1000,
+  speed: 1200,
 });
 
 // Подключение анимаций по скроллу
