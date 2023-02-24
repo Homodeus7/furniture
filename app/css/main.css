@@ -587,4 +587,34 @@ body {
   text-align: center;
   padding: 42px 0 41px;
 }
+
+.top__slider {
+  max-width: 1900px;
+  max-height: 800px;
+}
+.top__slider-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.top__slider-info {
+  min-width: 645px;
+}
+.top__slider-title {
+  color: #363838;
+  font-size: 110px;
+  line-height: 135px;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  position: relative;
+}
+.top__slider-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  height: 1px;
+  background: #6d7278;
+}
 /*# sourceMappingURL=main.css.map */
