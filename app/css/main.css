@@ -773,7 +773,6 @@ body {
   min-height: 600px;
 }
 .decor__title {
-  max-width: 540px;
   color: #363838;
   font-size: 60px;
   line-height: 80px;
@@ -792,6 +791,6 @@ body {
   background: #6d7278;
 }
 .decor__text {
-  max-width: 540px;
+  max-width: 7300px;
 }
 /*# sourceMappingURL=main.css.map */

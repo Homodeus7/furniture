@@ -78,14 +78,13 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)
 
 swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true
-  },
-  autoplay: {
-    stopOnLastSlide: false,
-    delay: 2000,
-    disableOnInteraction: false
   },
   speed: 1000
 });

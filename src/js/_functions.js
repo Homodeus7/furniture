@@ -53,14 +53,13 @@ console.log(mobileCheck());
 import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
-  autoplay: {
-    stopOnLastSlide: false,
-    delay: 2000,
-    disableOnInteraction: false,
   },
   speed: 1000,
 });
