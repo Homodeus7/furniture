@@ -9,11 +9,14 @@
 @import 'global';
 
 
-// подключения компонентов страницы
+// header-footer
 @import "./components/header";
 @import "./components/footer";
+
+// index main
 @import "./components/top";
 @import "./components/new-collection";
+@import "./components/decor";
 
 
 

@@ -325,7 +325,7 @@ body {
   padding: 0 15px;
 }
 
-.container {
+.container-fluid {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0 10px;
@@ -763,5 +763,35 @@ body {
   font-weight: 600;
   font-size: 14px;
   color: #5a5a5a;
+}
+
+.decor {
+  padding: 170px 0 155px;
+  background-image: url(../img/content/decor.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+.decor__title {
+  max-width: 540px;
+  color: #363838;
+  font-size: 60px;
+  line-height: 80px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  position: relative;
+}
+.decor__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  height: 1px;
+  background: #6d7278;
+}
+.decor__text {
+  max-width: 540px;
 }
 /*# sourceMappingURL=main.css.map */
