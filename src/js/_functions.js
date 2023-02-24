@@ -1,6 +1,6 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
-
+import "./functions/right-side-menu";
 // Определение операционной системы на мобильных
 import { mobileCheck } from "./functions/mobile-check";
 console.log(mobileCheck());
@@ -53,23 +53,16 @@ console.log(mobileCheck());
 import Swiper, { Navigation, Pagination } from "swiper";
 Swiper.use([Navigation, Pagination]);
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
-
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  autoplay: {
+    stopOnLastSlide: false,
+    delay: 2000,
+    disableOnInteraction: false,
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  speed: 1000,
 });
 
 // Подключение анимаций по скроллу

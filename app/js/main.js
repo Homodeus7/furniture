@@ -19,14 +19,16 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var _functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/right-side-menu */ "./src/js/functions/right-side-menu.js");
+/* harmony import */ var _functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
 
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -74,23 +76,18 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
-  // Optional parameters
-
-  // If we need pagination
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
   pagination: {
-    el: ".swiper-pagination"
+    el: ".swiper-pagination",
+    clickable: true
   },
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+  autoplay: {
+    stopOnLastSlide: false,
+    delay: 2000,
+    disableOnInteraction: false
   },
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar"
-  }
+  speed: 1000
 });
 
 // Подключение анимаций по скроллу
@@ -182,6 +179,21 @@ const mobileCheck = () => {
     return "iOS";
   }
   return "unknown";
+};
+
+/***/ }),
+
+/***/ "./src/js/functions/right-side-menu.js":
+/*!*********************************************!*\
+  !*** ./src/js/functions/right-side-menu.js ***!
+  \*********************************************/
+/***/ (() => {
+
+document.querySelector(".header__btn").onclick = function () {
+  document.querySelector(".rightside-menu").classList.remove("rightside-menu--close");
+};
+document.querySelector(".rightside-menu__close").onclick = function () {
+  document.querySelector(".rightside-menu").classList.add("rightside-menu--close");
 };
 
 /***/ }),
