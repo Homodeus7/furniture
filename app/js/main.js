@@ -93,7 +93,11 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
 });
 
 const containerEl = document.querySelector(".gallery__inner");
-const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl);
+const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl, {
+  load: {
+    filter: ".living"
+  }
+});
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

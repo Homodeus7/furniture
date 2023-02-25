@@ -69,7 +69,11 @@ import mixitup from "mixitup";
 
 const containerEl = document.querySelector(".gallery__inner");
 
-const mixer = mixitup(containerEl);
+const mixer = mixitup(containerEl, {
+  load: {
+    filter: ".living",
+  },
+});
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
