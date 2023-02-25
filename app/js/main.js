@@ -76,17 +76,18 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
   autoplay: {
-    delay: 2000,
+    delay: 2400,
     disableOnInteraction: false
   },
   pagination: {
     el: ".swiper-pagination",
     clickable: true
   },
-  speed: 1200
+  speed: 1200,
+  loop: true
 });
 
 // Подключение анимаций по скроллу
