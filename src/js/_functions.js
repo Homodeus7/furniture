@@ -65,6 +65,12 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 
+import mixitup from "mixitup";
+
+const containerEl = document.querySelector(".gallery__inner");
+
+const mixer = mixitup(containerEl);
+
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();
