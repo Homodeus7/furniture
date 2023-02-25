@@ -1,4 +1,4 @@
-.footer__info-title, .rightside-menu__title, .menu__list-link {
+.work-path__title, .decor__title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -128,7 +128,7 @@ a {
   position: relative;
 }
 
-.footer__info-title, .rightside-menu__title, .menu__list-link {
+.work-path__title, .decor__title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -792,5 +792,16 @@ body {
 }
 .decor__text {
   max-width: 7300px;
+}
+
+.work-path {
+  padding: 80px 0 30px;
+}
+.work-path__title {
+  text-align: center;
+  color: #363838;
+  margin-bottom: 40px;
+  font-style: 36px;
+  line-height: 51px;
 }
 /*# sourceMappingURL=main.css.map */

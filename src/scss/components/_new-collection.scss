@@ -3,6 +3,7 @@
     padding: 45px 0 105px;
     &__title{
         color: $title;
+        @extend %title-font;
         font-size: 36px;
         line-height: 25px;
         padding-bottom: 25px;

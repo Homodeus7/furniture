@@ -6,6 +6,7 @@
     min-height: 600px;
     &__title{
         color: $title;
+        @extend %title-font;
         font-size: 60px;
         line-height: 80px;
         padding-bottom: 22px;

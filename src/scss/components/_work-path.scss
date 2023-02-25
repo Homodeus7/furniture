@@ -1,0 +1,11 @@
+.work-path{
+    padding: 80px 0 30px;
+    &__title{
+        @extend %title-font;
+        text-align: center;
+        color: $title;
+        margin-bottom: 40px;
+        font-style: 36px;
+        line-height: 51px;
+    }
+}
