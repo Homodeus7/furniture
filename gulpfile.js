@@ -140,7 +140,7 @@ const stylesBackend = () => {
 
 // scripts
 const scripts = () => {
-  return src([paths.srcMainJs, "node_modules/slick-carousel/slick/slick.js"])
+  return src([paths.srcMainJs, "node_modules/mixitup/dist/mixitup.js"])
     .pipe(
       plumber(
         notify.onError({
