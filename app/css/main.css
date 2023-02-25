@@ -1,4 +1,4 @@
-.work-path__title, .decor__title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -128,7 +128,7 @@ a {
   position: relative;
 }
 
-.work-path__title, .decor__title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -801,7 +801,75 @@ body {
   text-align: center;
   color: #363838;
   margin-bottom: 40px;
-  font-style: 36px;
+  font-size: 36px;
   line-height: 51px;
+}
+.work-path__items-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  border-bottom: 2px solid rgba(54, 56, 56, 0.7);
+  position: relative;
+}
+.work-path__items-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #363838;
+}
+.work-path__item {
+  width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+.work-path__item--production {
+  margin-left: 317px;
+}
+.work-path__item--production::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 2px;
+  background: rgba(54, 56, 56, 0.7);
+}
+.work-path__item--production, .work-path__item--consultation {
+  padding-bottom: 38px;
+}
+.work-path__item--measurements {
+  padding-top: 38px;
+  margin-left: 305px;
+}
+.work-path__item--measurements::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 2px;
+  background: rgba(54, 56, 56, 0.7);
+}
+.work-path__item-title {
+  margin-left: 13px;
+  color: #363838;
+}
+.work-path__item-text {
+  margin-top: 13px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -59,6 +59,7 @@
         opacity: 0;
     }
     &__info-title{
+        @extend %title-font;
         font-size: 20px;
         line-height: 25px;
         color: $title;
