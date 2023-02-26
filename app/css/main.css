@@ -370,6 +370,21 @@ body {
   color: rgba(54, 56, 56, 0.9);
   line-height: 22px;
 }
+.menu__list-link--active-about, .menu__list-link--active-gallery, .menu__list-link--active-blog, .menu__list-link--active-contact {
+  padding-bottom: 4px;
+  position: relative;
+}
+.menu__list-link--active-about::after, .menu__list-link--active-gallery::after, .menu__list-link--active-blog::after, .menu__list-link--active-contact::after {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 1px;
+  background-color: rgba(54, 56, 56, 0.7);
+}
 
 .rightside-menu {
   position: absolute;

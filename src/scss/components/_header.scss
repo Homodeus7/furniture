@@ -31,6 +31,24 @@
         color: $title-main;
         line-height: 22px;
     }
+    &__list-link--active-about,
+    &__list-link--active-gallery,
+    &__list-link--active-blog,
+    &__list-link--active-contact{
+        padding-bottom: 4px;
+        position: relative;
+        &::after{
+            display: none;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-radius: 1px;
+            background-color: rgba($title, .7);
+        }
+    }
 }
 
 .rightside-menu{
