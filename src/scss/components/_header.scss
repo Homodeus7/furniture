@@ -31,14 +31,10 @@
         color: $title-main;
         line-height: 22px;
     }
-    &__list-link--active-about,
-    &__list-link--active-gallery,
-    &__list-link--active-blog,
-    &__list-link--active-contact{
+    &__list-link--active{
         padding-bottom: 4px;
         position: relative;
         &::after{
-            display: none;
             content: '';
             position: absolute;
             bottom: 0;
