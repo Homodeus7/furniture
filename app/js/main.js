@@ -25,8 +25,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mixitup */ "./node_modules/mixitup/dist/mixitup.js");
 /* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(mixitup__WEBPACK_IMPORTED_MODULE_3__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fancyapps/ui/dist/fancybox/fancybox.esm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fancyapps/ui/dist/fancybox/fancybox.css'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
@@ -101,10 +99,16 @@ const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl, {
   }
 });
 
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+// import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fancyapps/ui/dist/fancybox/fancybox.esm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(document.document.querySelector(".about__popup-play"), "[data-fancybox]", {
-  // Your custom options
-});
+// Fancybox.bind(
+//   document.document.querySelector(".about__popup-play"),
+//   "[data-fancybox]",
+//   {
+//     // Your custom options
+//   }
+// );
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

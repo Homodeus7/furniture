@@ -75,16 +75,16 @@ const mixer = mixitup(containerEl, {
   },
 });
 
-import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
-import "@fancyapps/ui/dist/fancybox/fancybox.css";
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+// import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
-Fancybox.bind(
-  document.document.querySelector(".about__popup-play"),
-  "[data-fancybox]",
-  {
-    // Your custom options
-  }
-);
+// Fancybox.bind(
+//   document.document.querySelector(".about__popup-play"),
+//   "[data-fancybox]",
+//   {
+//     // Your custom options
+//   }
+// );
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
