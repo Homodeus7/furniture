@@ -102,7 +102,7 @@ const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl, {
 });
 
 
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fancyapps/ui/dist/fancybox/fancybox.esm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())("[data-fancybox]", {
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '@fancyapps/ui/dist/fancybox/fancybox.esm.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(document.document.querySelector(".about__popup-play"), "[data-fancybox]", {
   // Your custom options
 });
 
