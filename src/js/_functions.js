@@ -75,6 +75,13 @@ const mixer = mixitup(containerEl, {
   },
 });
 
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
+
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
 // AOS.init();

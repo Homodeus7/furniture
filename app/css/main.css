@@ -1,3 +1,4 @@
+@import "../../@fancyapps/ui/dist/fancybox/fancybox.css";
 .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
