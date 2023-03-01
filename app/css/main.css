@@ -593,7 +593,7 @@ body {
 
 .new-collection {
   text-align: center;
-  padding: 45px 0 105px;
+  padding: 45px 0 35px;
 }
 .new-collection__title {
   color: #363838;
@@ -625,6 +625,7 @@ body {
   -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   gap: 30px;
+  padding-bottom: 70px;
 }
 .collection__item {
   position: relative;
@@ -1038,9 +1039,22 @@ body {
   border-radius: 4px;
 }
 .inspiration__line {
-  margin-top: 2px;
+  margin-top: -2px;
   height: 2px;
   border-radius: 4px;
   background-color: #363838;
+}
+
+.partners {
+  padding: 16px 0 60px;
+}
+.partners__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+}
+.partners__item {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=main.css.map */
