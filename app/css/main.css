@@ -826,14 +826,10 @@ body {
 .gallery__items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (-webkit-max-content)[4];
-  -ms-grid-columns: (max-content)[4];
-  grid-template-columns: repeat(4, -webkit-max-content);
-  grid-template-columns: repeat(4, max-content);
-  -ms-grid-rows: (-webkit-max-content)[2];
-  -ms-grid-rows: (max-content)[2];
-  grid-template-rows: repeat(2, -webkit-max-content);
-  grid-template-rows: repeat(2, max-content);
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
   gap: 30px 35px;
 }
 .gallery__item--right {
@@ -851,6 +847,9 @@ body {
 .gallery__item img {
   -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
+  max-height: 1150px;
+  height: 100%;
 }
 
 .blog-box {
