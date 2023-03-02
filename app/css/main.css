@@ -1056,4 +1056,12 @@ body {
 .partners__item {
   margin: 0 auto;
 }
+
+.place-card {
+  display: none;
+}
+
+.map {
+  margin-bottom: 50px;
+}
 /*# sourceMappingURL=main.css.map */
