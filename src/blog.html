@@ -67,10 +67,98 @@
             </ul>
         </div>
       </div>
-      @include('partials/about/about-prev.html')
-      @include('partials/about/inspiration.html')
-      @include('partials/about/partners.html')
-      @include('partials/about/new-collection.html')
+      <section class="blog">
+        <div class="container">
+          <div class="blog__inner">
+            <div class="blog__items"></div>
+            <aside class="aside">
+              <form class="aside__search">
+                <input class="aside__search-input" type="text" placeholder="">
+                <button class="aside__search-btn" type="submit">
+                  <img class="aside__search-img" src="img/search-icon.svg" alt="search icon">
+                </button>
+              </form>
+              <div class="aside__category">
+                <h6 class="aside__category-title">Categories</h6>
+                <ul class="aside__category-item">
+                  <li class="aside__category-item">
+                    <a class="aside__category-link" href="#">Dining room (1)</a>
+                  </li>
+                  <li class="aside__category-item">
+                    <a class="aside__category-link" href="#">Office furniture (12)</a>
+                  </li>
+                  <li class="aside__category-item">
+                    <a class="aside__category-link" href="#">Simple interiror design (2)</a>
+                  </li>
+                  <li class="aside__category-item">
+                    <a class="aside__category-link" href="#">Design (4)</a>
+                  </li>
+                  <li class="aside__category-item">
+                    <a class="aside__category-link" href="#">Bedroom Furniture (1)</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="racent-posts">
+                <h6 class="recent-posts__title">Recent Posts</h6>
+                <ul class="recent-posts__list">
+                  <li class="recent-posts__item">
+                    <a class="recent-posts__item-title" href="#">Cred selfies edison bulb four dollar toast humblebrag</a>
+                    <span class="recent-posts__date">August 10, 2020</span> | 
+                    <a class="recent-posts__author" href="#">by Ann Summers</a>
+                  </li>
+                  <li class="recent-posts__item">
+                    <a class="recent-posts__item-title" href="#">Semiotics fixie four dollar toast, next level woke scenester direct trade photo booth</a>
+                    <span class="recent-posts__date">August 10, 2020</span> | 
+                    <a class="recent-posts__author" href="#">by Ann Summers</a>
+                  </li>
+                  <li class="recent-posts__item">
+                    <a class="recent-posts__item-title" href="#">Cred selfies edison bulb four dollar toast humblebrag</a>
+                    <span class="recent-posts__date">May 2, 2020</span> | 
+                    <a class="recent-posts__author" href="#">by Ann Summers</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="aside__tags">
+                <h6 class="aside__tags-title"></h6>
+                <a class="aside__tags-link" href="#">Dining room futniture</a>
+                <a class="aside__tags-link" href="#">Chair</a>
+                <a class="aside__tags-link" href="#">Table</a>
+                <a class="aside__tags-link" href="#">Bedroom</a>
+                <a class="aside__tags-link" href="#">Office Furniture</a>
+              </div>
+              <ul class="aside__social">
+                <li class="aside__social-item">
+                    <a class="aside__social-link" href="#">
+                        <img class="aside__social-img" src="img/facebook.svg" alt="facebook logo" >
+                    </a>
+                </li>
+                <li class="aside__social-item">
+                    <a class="aside__social-link" href="#">
+                        <img class="aside__social-img" src="img/instagram.svg" alt="instagram logo" >
+                    </a>
+                </li>
+                <li class="aside__social-item">
+                    <a class="aside__social-link" href="#">
+                        <img class="aside__social-img" src="img/pinterest.svg" alt="pinterest logo" >
+                    </a>
+                </li>
+                <li class="aside__social-item">
+                    <a class="aside__social-link" href="#">
+                        <img class="aside__social-img" src="img/whatsapp.svg" alt="whatsapp logo" >
+                    </a>
+                </li>
+                <li class="aside__social-item">
+                    <a class="aside__social-link" href="#">
+                        <img class="aside__social-img" src="img/youtube.svg" alt="youtube logo" >
+                    </a>
+                </li>
+            </ul>
+            </aside>
+         </div>
+        </div>
+      </section>
+
+
     </main>
     @include('partials/footer.html')
   </div>
