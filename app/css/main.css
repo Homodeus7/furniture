@@ -1213,4 +1213,13 @@ body {
   min-width: 160px;
   cursor: pointer;
 }
+
+.slider__wrapper {
+  padding: 10px 10px;
+}
+.slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */
