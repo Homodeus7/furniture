@@ -96,12 +96,9 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
   loop: true
 });
 
-const containerEl = document.querySelector(".gallery__inner");
-const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl, {
-  load: {
-    filter: ".living"
-  }
-});
+const containerEl = document.querySelector(".container");
+const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl);
+mixer.filter(".living");
 
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";

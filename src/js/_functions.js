@@ -71,13 +71,11 @@ const swiper = new Swiper(".swiper", {
 
 import mixitup from "mixitup";
 
-const containerEl = document.querySelector(".gallery__inner");
+const containerEl = document.querySelector(".container");
 
-const mixer = mixitup(containerEl, {
-  load: {
-    filter: ".living",
-  },
-});
+const mixer = mixitup(containerEl);
+
+mixer.filter(".living");
 
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
