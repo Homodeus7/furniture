@@ -50,23 +50,23 @@
     &__category-link{
         color: inherit;
     }
-    &__recent-posts{
+    &__posts{
         margin-bottom: 40px;
-        &__title{
+        &-title{
             margin-bottom: 24px;
             color: $title;
             @extend %title-font;
             line-height: 23px;
         }
-        &__item{
+        &-item{
             margin-bottom: 11px;
         }
-        &__item-title{
+        &-item-title{
             display: block;
             color: inherit;
         }
-        &__date,
-        &__author{
+        &-date,
+        &-author{
             color: #a1a1a1;
             font-size: 14px;
         }

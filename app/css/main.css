@@ -1,4 +1,4 @@
-.aside__tags-title, .aside__recent-posts__title, .aside__category-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.aside__tags-title, .aside__posts-title, .aside__category-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -128,7 +128,7 @@ a {
   position: relative;
 }
 
-.aside__tags-title, .aside__recent-posts__title, .aside__category-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.aside__tags-title, .aside__posts-title, .aside__category-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -1366,22 +1366,22 @@ body {
 .aside__category-link {
   color: inherit;
 }
-.aside__recent-posts {
+.aside__posts {
   margin-bottom: 40px;
 }
-.aside__recent-posts__title {
+.aside__posts-title {
   margin-bottom: 24px;
   color: #363838;
   line-height: 23px;
 }
-.aside__recent-posts__item {
+.aside__posts-item {
   margin-bottom: 11px;
 }
-.aside__recent-posts__item-title {
+.aside__posts-item-title {
   display: block;
   color: inherit;
 }
-.aside__recent-posts__date, .aside__recent-posts__author {
+.aside__posts-date, .aside__posts-author {
   color: #a1a1a1;
   font-size: 14px;
 }
