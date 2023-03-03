@@ -78,8 +78,12 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation]);
 const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
   autoplay: {
     delay: 2400,
     disableOnInteraction: false

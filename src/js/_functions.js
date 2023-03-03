@@ -50,9 +50,13 @@ console.log(mobileCheck());
 // });
 
 // Подключение свайпера
-import Swiper, { Pagination } from "swiper";
-Swiper.use([Pagination]);
+import Swiper, { Pagination, Navigation } from "swiper";
+Swiper.use([Pagination, Navigation]);
 const swiper = new Swiper(".swiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   autoplay: {
     delay: 2400,
     disableOnInteraction: false,
