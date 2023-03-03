@@ -1,6 +1,5 @@
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
-// import "./functions/right-side-menu";
 // // Определение операционной системы на мобильных
 // import { mobileCheck } from "./functions/mobile-check";
 // console.log(mobileCheck());
@@ -71,11 +70,13 @@ const swiper = new Swiper(".swiper", {
 
 import mixitup from "mixitup";
 
-const containerEl = document.querySelector(".container");
+const containerEl = document.querySelector(".gallery__inner");
 
-const mixer = mixitup(containerEl);
-
-mixer.filter(".living");
+const mixer = mixitup(containerEl, {
+  load: {
+    filter: ".living",
+  },
+});
 
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 // import "@fancyapps/ui/dist/fancybox/fancybox.css";
