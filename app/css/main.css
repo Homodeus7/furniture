@@ -1388,7 +1388,12 @@ body {
   margin: 0 10px;
 }
 .pagination__list-num {
+  font-weight: 600;
+  font-size: 14px;
   color: #707070;
+}
+.pagination__list-num--active {
+  color: #363838;
 }
 .pagination__arrow {
   margin: 0 10px;

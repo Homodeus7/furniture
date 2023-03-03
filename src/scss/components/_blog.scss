@@ -92,7 +92,12 @@
             margin: 0 10px;
         }
         &-num{
+            font-weight: 600;
+            font-size: 14px;
             color: #707070;
+        }
+        &-num--active{
+            color: #363838;
         }
     }
     &__arrow{
