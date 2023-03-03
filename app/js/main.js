@@ -19,18 +19,15 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/right-side-menu */ "./src/js/functions/right-side-menu.js");
-/* harmony import */ var _functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_functions_right_side_menu__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mixitup */ "./node_modules/mixitup/dist/mixitup.js");
-/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(mixitup__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! mixitup */ "./node_modules/mixitup/dist/mixitup.js");
+/* harmony import */ var mixitup__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(mixitup__WEBPACK_IMPORTED_MODULE_1__);
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
-
-// Определение операционной системы на мобильных
-
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)());
+// import "./functions/right-side-menu";
+// // Определение операционной системы на мобильных
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck());
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -78,8 +75,8 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_1__.mobileCheck)
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_2__.Navigation]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -97,7 +94,7 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](".swiper", {
 });
 
 const containerEl = document.querySelector(".container");
-const mixer = mixitup__WEBPACK_IMPORTED_MODULE_3___default()(containerEl);
+const mixer = mixitup__WEBPACK_IMPORTED_MODULE_1___default()(containerEl);
 mixer.filter(".living");
 
 // import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
@@ -142,26 +139,6 @@ mixer.filter(".living");
 
 /***/ }),
 
-/***/ "./src/js/_vars.js":
-/*!*************************!*\
-  !*** ./src/js/_vars.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  windowEl: window,
-  documentEl: document,
-  htmlEl: document.documentElement,
-  bodyEl: document.body
-});
-
-/***/ }),
-
 /***/ "./src/js/_vendor.js":
 /*!***************************!*\
   !*** ./src/js/_vendor.js ***!
@@ -173,49 +150,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/focus-visible.js */ "./src/js/vendor/focus-visible.js");
 /* harmony import */ var _vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_focus_visible_js__WEBPACK_IMPORTED_MODULE_0__);
 
-
-/***/ }),
-
-/***/ "./src/js/functions/mobile-check.js":
-/*!******************************************!*\
-  !*** ./src/js/functions/mobile-check.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "mobileCheck": () => (/* binding */ mobileCheck)
-/* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
-
-const mobileCheck = () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  if (/android/i.test(userAgent)) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
-    return "Android";
-  }
-  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
-    return "iOS";
-  }
-  return "unknown";
-};
-
-/***/ }),
-
-/***/ "./src/js/functions/right-side-menu.js":
-/*!*********************************************!*\
-  !*** ./src/js/functions/right-side-menu.js ***!
-  \*********************************************/
-/***/ (() => {
-
-document.querySelector(".header__btn").onclick = function () {
-  document.querySelector(".rightside-menu").classList.remove("rightside-menu--close");
-};
-document.querySelector(".rightside-menu__close").onclick = function () {
-  document.querySelector(".rightside-menu").classList.add("rightside-menu--close");
-};
 
 /***/ }),
 
