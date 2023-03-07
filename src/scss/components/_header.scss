@@ -6,25 +6,43 @@
         height: 120px;
     }
     &__btn{
+        display: none;
         background-color: transparent;
         border: none;
         padding: 0;
         cursor: pointer;
+
+        @include for-size(md){
+            display: block;
+        }
     }
 }
 
 .logo{
-    margin: 0 auto;
+    margin: 0;
+    @include for-size(md){
+        margin: 0 auto;
+    }
 }
 
 .menu{
     padding-left: 35px;
     padding-right: 60px;
+
+    @include for-size(md){
+        padding-left: 0;
+        padding-right: 0;    
+    }
     &__list{   
         display: flex;
     }
     &__list-item + .menu__list-item{
         padding-left: 80px;
+
+        @include for-size(md){
+            padding-left: 40px;    
+        }
+
     }
     &__list-link{
         @extend %title-font;

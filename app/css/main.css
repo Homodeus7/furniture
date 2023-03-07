@@ -272,19 +272,36 @@ body {
   height: 120px;
 }
 .header__btn {
+  display: none;
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .header__btn {
+    display: block;
+  }
+}
 
 .logo {
-  margin: 0 auto;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .logo {
+    margin: 0 auto;
+  }
 }
 
 .menu {
   padding-left: 35px;
   padding-right: 60px;
+}
+@media (min-width: 768px) {
+  .menu {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .menu__list {
   display: -webkit-box;
@@ -293,6 +310,11 @@ body {
 }
 .menu__list-item + .menu__list-item {
   padding-left: 80px;
+}
+@media (min-width: 768px) {
+  .menu__list-item + .menu__list-item {
+    padding-left: 40px;
+  }
 }
 .menu__list-link {
   color: rgba(54, 56, 56, 0.9);
