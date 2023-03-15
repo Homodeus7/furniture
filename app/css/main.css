@@ -990,6 +990,60 @@ body {
   -ms-flex-align: center;
   align-items: center;
   padding: 160px 0;
+  cursor: pointer;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 20;
+}
+.modal__item {
+  background-color: transparent;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 20;
+}
+.modal__overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+.modal__item--visible {
+  display: block;
 }
 
 .inspiration {

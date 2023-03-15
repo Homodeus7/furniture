@@ -68,26 +68,36 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 
-import mixitup from "mixitup";
+// import mixitup from "mixitup";
 
-const containerEl = document.querySelector(".gallery__inner");
+// const containerEl = document.querySelector(".gallery__inner");
 
-const mixer = mixitup(containerEl, {
-  load: {
-    filter: ".living",
-  },
+// const mixer = mixitup(containerEl, {
+//   load: {
+//     filter: ".living",
+//   },
+// });
+
+// Модальное окно
+
+const modals = document.querySelectorAll(".modal-inner");
+const modalItem = document.querySelector(".modal__item");
+const modalOverlay = document.querySelector(".modal__overlay");
+
+modals.forEach((el) => {
+  el.addEventListener("click", () => {
+    modalItem.classList.add("modal__item--visible");
+    modalOverlay.classList.add("modal__overlay--visible");
+    document.getElementById("videoFrame").src =
+      "https://www.youtube.com/embed/4XXIQePVeHU?controls=0";
+  });
 });
-
-// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
-// import "@fancyapps/ui/dist/fancybox/fancybox.css";
-
-// Fancybox.bind(
-//   document.document.querySelector(".about__popup-play"),
-//   "[data-fancybox]",
-//   {
-//     // Your custom options
-//   }
-// );
+modalOverlay.addEventListener("click", (e) => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("modal__overlay--visible");
+    document.getElementById("videoFrame").src = "not.found/404";
+  }
+});
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
