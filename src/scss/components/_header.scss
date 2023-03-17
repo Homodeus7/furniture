@@ -4,43 +4,77 @@
         justify-content: space-between;
         align-items: center;
         height: 120px;
+        @include for-size(sm){
+            flex-wrap: wrap;
+            height: 80px;
+            padding-top: 20px;
+        }
     }
     &__btn{
-        display: none;
+        display: block;
         background-color: transparent;
         border: none;
         padding: 0;
         cursor: pointer;
-
         @include for-size(md){
-            display: block;
+            display: none;
         }
+    }
+}
+
+.burger{
+    display: none;
+    @include burger;
+    order: -1;
+    position: relative;
+    z-index: 12;
+    @include for-size(sm){
+        display: block;
+
     }
 }
 
 .logo{
     margin: 0;
+    min-width: 97px;
+    position: relative;
+    z-index: 12;
     @include for-size(md){
-        margin: 0 auto;
+        order: -1;
     }
 }
 
 .menu{
     padding-left: 35px;
     padding-right: 60px;
-
+    @include for-size(sm){
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%; 
+        background-color: #fff;
+        position: relative;
+        z-index: 11;
+        text-align: center;
+        transform: translateY(-250px);
+        transition: all .5s;
+        &--active{
+            transform: translateY(28px);
+        }
+    }    
     @include for-size(md){
         padding-left: 0;
-        padding-right: 0;    
     }
     &__list{   
         display: flex;
+        @include for-size(sm){
+            display: block; 
+        }
     }
     &__list-item + .menu__list-item{
         padding-left: 80px;
 
-        @include for-size(md){
-            padding-left: 40px;    
+        @include for-size(sm){
+            padding-left: 0;   
         }
 
     }
@@ -48,10 +82,17 @@
         @extend %title-font;
         color: $title-main;
         line-height: 22px;
+        @include for-size(sm){
+            display: block; 
+            padding: 15px 0;
+        }
     }
     &__list-link--active{
         padding-bottom: 4px;
         position: relative;
+        @include for-size(sm){
+            padding-bottom: 15px;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -61,6 +102,9 @@
             height: 2px;
             border-radius: 1px;
             background-color: rgba($title, .7);
+            @include for-size(sm){
+                display: none;
+            }
         }
     }
 }

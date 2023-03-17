@@ -20,7 +20,8 @@
 // import './functions/fix-fullheight';
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+
+import { burger } from "./functions/burger";
 
 // Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './functions/disable-scroll';
@@ -68,16 +69,15 @@ const swiper = new Swiper(".swiper", {
   loop: true,
 });
 
-// import mixitup from "mixitup";
+import mixitup from "mixitup";
 
-// const containerEl = document.querySelector(".gallery__inner");
+const containerEl = document.querySelector(".gallery__inner");
 
-// const mixer = mixitup(containerEl, {
-//   load: {
-//     filter: ".living",
-//   },
-// });
-
+mixitup(containerEl, {
+  load: {
+    filter: ".living",
+  },
+});
 // Модальное окно
 
 const modals = document.querySelectorAll(".modal-inner");
