@@ -81,7 +81,10 @@ __webpack_require__.r(__webpack_exports__);
 // Подключение свайпера
 
 swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
+new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
+  mousewheel: {
+    forceToAxis: true
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
@@ -102,24 +105,6 @@ const containerEl = document.querySelector(".gallery__inner");
 mixitup__WEBPACK_IMPORTED_MODULE_2___default()(containerEl, {
   load: {
     filter: ".living"
-  }
-});
-// Модальное окно
-
-const modals = document.querySelectorAll(".modal-inner");
-const modalItem = document.querySelector(".modal__item");
-const modalOverlay = document.querySelector(".modal__overlay");
-modals.forEach(el => {
-  el.addEventListener("click", () => {
-    modalItem.classList.add("modal__item--visible");
-    modalOverlay.classList.add("modal__overlay--visible");
-    document.getElementById("videoFrame").src = "https://www.youtube.com/embed/4XXIQePVeHU?controls=0";
-  });
-});
-modalOverlay.addEventListener("click", e => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove("modal__overlay--visible");
-    document.getElementById("videoFrame").src = "not.found/404";
   }
 });
 

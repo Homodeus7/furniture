@@ -52,7 +52,11 @@ import { burger } from "./functions/burger";
 // Подключение свайпера
 import Swiper, { Pagination, Navigation } from "swiper";
 Swiper.use([Pagination, Navigation]);
-const swiper = new Swiper(".swiper", {
+
+new Swiper(".swiper", {
+  mousewheel: {
+    forceToAxis: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -77,26 +81,6 @@ mixitup(containerEl, {
   load: {
     filter: ".living",
   },
-});
-// Модальное окно
-
-const modals = document.querySelectorAll(".modal-inner");
-const modalItem = document.querySelector(".modal__item");
-const modalOverlay = document.querySelector(".modal__overlay");
-
-modals.forEach((el) => {
-  el.addEventListener("click", () => {
-    modalItem.classList.add("modal__item--visible");
-    modalOverlay.classList.add("modal__overlay--visible");
-    document.getElementById("videoFrame").src =
-      "https://www.youtube.com/embed/4XXIQePVeHU?controls=0";
-  });
-});
-modalOverlay.addEventListener("click", (e) => {
-  if (e.target === modalOverlay) {
-    modalOverlay.classList.remove("modal__overlay--visible");
-    document.getElementById("videoFrame").src = "not.found/404";
-  }
 });
 
 // Подключение анимаций по скроллу

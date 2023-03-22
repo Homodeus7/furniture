@@ -122,7 +122,7 @@
     transition: all .6s;
     z-index: 10;
     &.rightside-menu--close{
-        transform: translateX(500%);
+        transform: translateX(100%);
     }
     &__close{
         background-color: transparent;
