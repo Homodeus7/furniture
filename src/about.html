@@ -8,29 +8,32 @@
     <header class="header">
       <div class="container-main">
         <div class="header__inner">
-          <nav class="menu">
+          <nav class="menu" data-menu>
             <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--active">About</a>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link menu__list-link menu__list-link--active">About</a>
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="gallery.html">Gallery</a>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link menu__list-link" href="gallery.html">Gallery</a>
               </li>
             </ul>
           </nav>
           <a class="logo" href="index.html">
             <img src="img/logo.png" alt="site logo">
           </a>
-          <nav class="menu">
+          <nav class="menu" data-menu-second>
             <ul class="menu__list">
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="blog.html">Blog</a>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link menu__list-link" href="blog.html">Blog</a>
               </li>
-              <li class="menu__list-item">
-                <a class="menu__list-link" href="contact.html">Contact</a>
+              <li class="menu__list-item" data-menu-item>
+                <a class="menu__list-link menu__list-link" href="contact.html">Contact</a>
               </li>
             </ul>
           </nav>
+          <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <span class="burger__line"></span>
+          </button>
           <button class="header__btn">
             <img src="img/icon_menu.svg" alt="icon menu">
           </button>
