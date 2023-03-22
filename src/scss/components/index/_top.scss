@@ -2,6 +2,13 @@
   &__inner{
     padding-bottom: 70px;
     position: relative;
+    @include for-size(lg){
+      padding-bottom: 5px;
+    }
+    @include for-size(md){
+      padding-bottom: 0;
+      padding-top: 30px;
+    }
     &::after{
       content: '';
       background-image: url(../img/main_slider.jpg);
@@ -10,24 +17,49 @@
       height: 722px;
       top:0;
       z-index: -1;
-
+      @include for-size(lg){
+        height: 100%;
+      }
     }
   }
   &__slider-item{
     display: flex!important;
     justify-content: center;
     align-items: center;
-    
+
   }
   &__slider-img{
     margin-left: -13%;
     max-width: 703px;
     max-height: 815px;
     object-fit: cover;
+    @include for-size(2xl){
+      margin-left: 0;
+    }
+    @include for-size(xl){
+      max-height: 640px;
+      margin-left: 0;
+      margin-bottom: 40px;
+    }
+    @include for-size(lg){
+      max-height: 540px;
+      margin-bottom: 30px;
+    }
+    @include for-size(md){
+      display: none;
+    }
   }
   &__slider-info{
-    max-width: 645px;
+    width: 645px;
     margin-left: 25px;
+    @include for-size(xl){
+      max-width: 340px;
+    }
+    @include for-size(md){
+      min-width: 100%;
+      margin-left: 60px;
+      padding-right: 20px;
+    }
   }
   &__slider-title{
     color: $title;
@@ -37,6 +69,14 @@
     padding-bottom: 26px;
     margin-bottom: 26px;
     position: relative;
+    @include for-size(xl){
+      font-size: 62px;
+      line-height: 74px;
+    }
+    @include for-size(lg){
+      font-size: 44px;
+      line-height: 54px;
+    }
     &::after{
       content: '';
       position: absolute;
@@ -49,6 +89,13 @@
   }
   &__slider-text{
     max-width: 585px;
+    @include for-size(md){
+      max-width: 100%;
+      margin-bottom: 45px;
+    }
+    @include for-size(sm){
+      padding-right: 40px;
+    }
   }
 }
 

@@ -6,9 +6,24 @@
     &__inner{
         display: flex;
         justify-content: space-between;
+        @include for-size(md){
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        @include for-size(xs){
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
     &__info{
         width: 540px;
+        @include for-size(lg){
+            width: 380px;
+        }
+        @include for-size(md){
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
     &__info-title{
         color: $title;
@@ -18,10 +33,16 @@
     }
     &__info-text{
         margin-bottom: 16px;
-        max-width: 475px;
+        width: 475px;
+        @include for-size(md){
+            width: 100%;
+        }
     }
     &__form{
         display: flex;
+        @include for-size(xs){
+            display: block;
+        }
     }
     &__form-input{
         padding: 6px 10px 6px 18px;
@@ -47,11 +68,11 @@
         min-width: 160px;
         margin-left: 9px;
         cursor: pointer;
-    }
-    &__social{
-        width: 125px;
-        margin-right: auto;
-        margin-left: 100px;
+        @include for-size(xs){
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        }
     }
     &__social-link{
         padding-left: 28px;
@@ -104,6 +125,12 @@
     &__menu{
         margin-right: 60px;
         width: 125px;
+        @include for-size(md){
+            margin-right: 35px;
+        }
+        @include for-size(xxs){
+            margin-right: 0;
+        }
     }
     &__copyright{
         background-color: $title;
