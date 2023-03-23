@@ -49,7 +49,7 @@ import { burger } from "./functions/burger";
 //   placement: 'right'
 // });
 
-// Подключение свайпера
+// Settings swiper
 import Swiper, { Pagination, Navigation } from "swiper";
 Swiper.use([Pagination, Navigation]);
 
@@ -72,6 +72,18 @@ new Swiper(".swiper", {
   speed: 1200,
   loop: true,
 });
+
+// how it works section - changing the order of elements
+
+if (window.innerWidth <= 576) {
+  function swap(node1, node2) {
+    node1.parentElement.insertBefore(node2, node1);
+  }
+  swap(
+    document.querySelector(".work-path__item--production"),
+    document.querySelector(".work-path__item--measurements")
+  );
+}
 
 import mixitup from "mixitup";
 

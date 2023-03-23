@@ -78,7 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 //   placement: 'right'
 // });
 
-// Подключение свайпера
+// Settings swiper
 
 swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
 new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
@@ -100,6 +100,15 @@ new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
   speed: 1200,
   loop: true
 });
+
+// how it works section - changing the order of elements
+
+if (window.innerWidth <= 576) {
+  function swap(node1, node2) {
+    node1.parentElement.insertBefore(node2, node1);
+  }
+  swap(document.querySelector(".work-path__item--production"), document.querySelector(".work-path__item--measurements"));
+}
 
 const containerEl = document.querySelector(".gallery__inner");
 mixitup__WEBPACK_IMPORTED_MODULE_2___default()(containerEl, {
