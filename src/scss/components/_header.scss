@@ -124,6 +124,9 @@
     @include for-size(xl){
         max-width: 400px;
     }
+    @include for-size(md){
+        display: none;
+    }
     &.rightside-menu--close{
         transform: translateX(100%);
     }

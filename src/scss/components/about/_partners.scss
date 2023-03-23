@@ -3,6 +3,12 @@
     &__items{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        @include for-size(md){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include for-size(xs){
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     &__item{
         margin: 0 auto;
