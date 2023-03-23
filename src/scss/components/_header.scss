@@ -48,11 +48,11 @@
     padding-left: 35px;
     padding-right: 60px;
     @include for-size(sm){
+        position: relative;
         padding-left: 0;
         padding-right: 0;
         width: 100%; 
         background-color: #fff;
-        position: relative;
         z-index: 11;
         text-align: center;
         transform: translateY(-250px);
@@ -120,7 +120,7 @@
     background-color: #fff;
     box-shadow: -1px 2px 3px 0px rgb(155, 149, 149);
     transition: all .6s;
-    z-index: 10;
+    z-index: 12;
     &.rightside-menu--close{
         transform: translateX(100%);
     }

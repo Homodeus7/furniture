@@ -232,7 +232,6 @@ body {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
-  overflow: hidden;
 }
 
 .container-fluid {
@@ -412,11 +411,11 @@ body {
 }
 @media (max-width: 576px) {
   .menu {
+    position: relative;
     padding-left: 0;
     padding-right: 0;
     width: 100%;
     background-color: #fff;
-    position: relative;
     z-index: 11;
     text-align: center;
     -webkit-transform: translateY(-250px);
@@ -504,7 +503,7 @@ body {
   -webkit-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
-  z-index: 10;
+  z-index: 12;
 }
 .rightside-menu.rightside-menu--close {
   -webkit-transform: translateX(100%);
@@ -768,7 +767,7 @@ body {
   width: 100%;
   height: 722px;
   top: 0;
-  z-index: -1;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
   .top__inner::after {
