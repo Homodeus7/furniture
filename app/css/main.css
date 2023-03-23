@@ -452,6 +452,11 @@ body {
 .menu__list-item + .menu__list-item {
   padding-left: 60px;
 }
+@media (max-width: 576px) {
+  .menu__list-item + .menu__list-item {
+    padding-left: 0;
+  }
+}
 .menu__list-link {
   color: rgba(54, 56, 56, 0.9);
   line-height: 22px;
@@ -971,24 +976,21 @@ body {
   .collection {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 @media (max-width: 375px) {
   .collection {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
+    gap: 10px 0;
+    padding-bottom: 0;
   }
 }
 .collection__item {
   position: relative;
   max-height: 350px;
   max-width: 350px;
-}
-@media (max-width: 375px) {
-  .collection__item {
-    max-height: 300px;
-    max-width: 300px;
-  }
 }
 .collection__item:hover .collection__info {
   opacity: 1;
@@ -1044,6 +1046,11 @@ body {
     margin-bottom: 10px;
   }
 }
+@media (max-width: 375px) {
+  .collection__info-title {
+    font-size: 20px;
+  }
+}
 .collection__info-title::after {
   content: "";
   position: absolute;
@@ -1063,6 +1070,11 @@ body {
 @media (max-width: 768px) {
   .collection__info-text {
     font-size: 12px;
+  }
+}
+@media (max-width: 375px) {
+  .collection__info-text {
+    font-size: 16px;
   }
 }
 
@@ -1371,6 +1383,11 @@ body {
 .blog-box {
   padding-bottom: 100px;
 }
+@media (max-width: 576px) {
+  .blog-box {
+    padding-bottom: 0;
+  }
+}
 .blog-box__title {
   color: #363838;
   font-size: 36px;
@@ -1379,12 +1396,28 @@ body {
   text-align: center;
   max-width: 430px;
 }
+@media (max-width: 576px) {
+  .blog-box__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
 .blog-box__items {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+}
+@media (max-width: 576px) {
+  .blog-box__items {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .blog-box__item {
+    padding-bottom: 30px;
+  }
 }
 .blog-box__img-link {
   margin-bottom: 19px;
@@ -1396,6 +1429,11 @@ body {
   font-weight: 600;
   color: #707070;
 }
+@media (max-width: 576px) {
+  .blog-box__links {
+    font-size: 12px;
+  }
+}
 .blog-box__date, .blog-box__autor, .blog-box__theme {
   color: inherit;
 }
@@ -1403,6 +1441,18 @@ body {
   color: #363838;
   font-size: 24px;
   line-height: 38px;
+}
+@media (max-width: 768px) {
+  .blog-box__item-title {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 375px) {
+  .blog-box__item-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .breadcrumbs {

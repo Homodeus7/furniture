@@ -74,7 +74,9 @@
     }
     &__list-item + .menu__list-item{
         padding-left: 60px;
-
+        @include for-size(sm){
+            padding-left: 0;
+        }
     }
     &__list-link{
         @extend %title-font;
