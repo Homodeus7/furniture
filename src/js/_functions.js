@@ -73,16 +73,43 @@ new Swiper(".swiper-contact", {
   mousewheel: {
     forceToAxis: true,
   },
-  autoplay: {
-    delay: 2400,
-    disableOnInteraction: false,
-  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
-  speed: 1200,
-  loop: true,
+  speed: 1500,
+  slidesPerView: 10,
+  slidesPerGroup: 10,
+  breakpoints: {
+    1536: {
+      slidesPerView: 8,
+      slidesPerGroup: 8,
+    },
+    1280: {
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+    },
+    1024: {
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+    },
+    768: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+    576: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+    375: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+    320: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
 });
 
 // how it works section - changing the order of elements

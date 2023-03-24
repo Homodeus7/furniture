@@ -1,4 +1,4 @@
-.aside__tags-title, .aside__posts-title, .aside__category-title, .blog__blockquote-name, .blog__item-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.aside__tags-title, .aside__posts-title, .aside__category-title, .blog__blockquote-name, .blog__item-title, .swiper-contact__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -128,7 +128,7 @@ a {
   position: relative;
 }
 
-.aside__tags-title, .aside__posts-title, .aside__category-title, .blog__blockquote-name, .blog__item-title, .slider__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
+.aside__tags-title, .aside__posts-title, .aside__category-title, .blog__blockquote-name, .blog__item-title, .swiper-contact__title, .contact__title, .inspiration__item, .inspiration__title, .about__title, .about__prev-title, .blog-box__item-title, .blog-box__title, .work-path__item-title, .work-path__title, .decor__title, .collection__info-title, .new-collection__title, .top__slider-title, .footer__info-title, .rightside-menu__title, .menu__list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -238,6 +238,7 @@ body {
   max-width: 1900px;
   margin: 0 auto;
   padding: 0 10px;
+  overflow: hidden;
 }
 
 .info-email {
@@ -1756,7 +1757,7 @@ body {
   margin-bottom: 50px;
 }
 .map iframe {
-  max-height: 560px;
+  height: 560px;
 }
 @media (max-width: 768px) {
   .map iframe {
@@ -1943,16 +1944,17 @@ body {
   }
 }
 
-.slider {
+.swiper-contact {
+  position: relative;
   padding-bottom: 50px !important;
   margin-bottom: 100px;
 }
-@media (max-width: 576px) {
-  .slider {
-    margin-bottom: 50px;
+@media (max-width: 768px) {
+  .swiper-contact {
+    margin-bottom: 0;
   }
 }
-.slider__item {
+.swiper-contact__item {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -1960,22 +1962,23 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.slider__link {
+.swiper-contact__link {
+  z-index: 100;
   position: relative;
 }
-.slider__link:hover .slider__title {
+.swiper-contact__link:hover .slider__title {
   opacity: 1;
   -webkit-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-.slider__img {
+.swiper-contact__img {
   min-width: 170px;
   height: 170px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-.slider__title {
+.swiper-contact__title {
   position: absolute;
   top: 0;
   left: 0;
@@ -1998,21 +2001,32 @@ body {
   text-align: center;
   opacity: 0;
 }
-
-.slider .swiper-pagination {
-  bottom: 0 !important;
+@media (max-width: 768px) {
+  .swiper-contact__title {
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+  }
 }
 
-.slider .swiper-pagination-bullet {
+.swiper-contact .swiper-pagination {
+  bottom: 0 !important;
+}
+@media (max-width: 768px) {
+  .swiper-contact .swiper-pagination {
+    display: none !important;
+  }
+}
+
+.swiper-contact .swiper-pagination-bullet {
   background-color: #363838;
   opacity: 1;
 }
 
-.slider .swiper-pagination-bullet {
+.swiper-contact .swiper-pagination-bullet {
   margin: 0 14px !important;
 }
 
-.slider .swiper-pagination-bullet-active {
+.swiper-contact .swiper-pagination-bullet-active {
   background-color: #FFEF35;
 }
 

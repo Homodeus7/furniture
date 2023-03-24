@@ -5,7 +5,7 @@
 .map{
     margin-bottom: 50px;
     iframe{
-        max-height: 560px;
+        height: 560px;
         @include for-size(md){
             max-height: 300px;
         }
