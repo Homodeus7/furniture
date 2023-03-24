@@ -50,12 +50,18 @@ import { burger } from "./functions/burger";
 // });
 
 // Settings swiper
-import Swiper, { Pagination } from "swiper";
-Swiper.use([Pagination]);
+import Swiper, { Pagination, Navigation } from "swiper";
+Swiper.use([Pagination, Navigation]);
 
 new Swiper(".swiper", {
   mousewheel: {
     forceToAxis: true,
+  },
+  speed: 1200,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   autoplay: {
     delay: 2400,
@@ -65,13 +71,15 @@ new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  speed: 1200,
-  loop: true,
 });
 
 new Swiper(".swiper-contact", {
   mousewheel: {
     forceToAxis: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
@@ -106,7 +114,7 @@ new Swiper(".swiper-contact", {
       slidesPerGroup: 2,
     },
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1.7,
       slidesPerGroup: 2,
     },
   },
