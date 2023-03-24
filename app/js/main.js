@@ -80,14 +80,25 @@ __webpack_require__.r(__webpack_exports__);
 
 // Settings swiper
 
-swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation]);
+swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);
 new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper", {
   mousewheel: {
     forceToAxis: true
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
+  autoplay: {
+    delay: 2400,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  speed: 1200,
+  loop: true
+});
+new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](".swiper-contact", {
+  mousewheel: {
+    forceToAxis: true
   },
   autoplay: {
     delay: 2400,

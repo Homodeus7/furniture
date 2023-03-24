@@ -1,6 +1,9 @@
 .slider{
     padding-bottom: 50px !important;
     margin-bottom: 100px;
+    @include for-size(sm){
+        margin-bottom: 50px;
+    }
     &__item{
         display: flex !important;
         justify-content: space-between;
